@@ -1,10 +1,26 @@
 .sidebar {
     display: flex;
     flex-direction: column;
+
+    color: white;
 }
 
-#typing {
+#nickname-form {
     width: calc(100% - 40px);
-    color: white;
-    margin: 20px;
+    padding: 20px;
+}
+
+#nickname-form p {
+    font-size: 24px;
+    text-align: center;
+}
+
+.form-elements {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.form-elements input {
+    width: 50%;
 }
