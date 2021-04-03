@@ -1,0 +1,10 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+}
+
+#typing {
+    width: calc(100% - 40px);
+    color: white;
+    margin: 20px;
+}
