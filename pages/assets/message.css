@@ -1,0 +1,39 @@
+.message {
+    margin: 10px;
+    max-width: 60%;
+    text-align: left;
+    align-self: flex-start;
+}
+
+.compress-space {
+    transform: translateY(-15px);
+}
+
+.message p {
+    margin-top: 0px;
+    margin-bottom: 2px;
+}
+
+.message.system-event {
+    text-align: center;
+    align-self: center;
+}
+
+.message.own-message {
+    text-align: right;
+    align-self: flex-end;
+}
+
+.bubble {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #8d64e4;
+}
+
+.system-event.bubble {
+    background-color: #C8C8CF;
+}
+
+.own-message.bubble {
+    background-color: #20C8F8;
+}

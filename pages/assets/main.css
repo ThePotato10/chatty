@@ -41,46 +41,6 @@ body {
     flex-direction: column;
 }
 
-.message {
-    margin: 10px;
-    max-width: 60%;
-    text-align: left;
-    align-self: flex-start;
-}
-
-.compress-space {
-    transform: translateY(-15px);
-}
-
-.message p {
-    margin-top: 0px;
-    margin-bottom: 2px;
-}
-
-.message.system-event {
-    text-align: center;
-    align-self: center;
-}
-
-.message.own-message {
-    text-align: right;
-    align-self: flex-end;
-}
-
-.bubble {
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #8d64e4;
-}
-
-.system-event.bubble {
-    background-color: #C8C8CF;
-}
-
-.own-message.bubble {
-    background-color: #20C8F8;
-}
-
 #form {
     height: 60px;
     width: 100%;
@@ -89,7 +49,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
 }
 
 #form input {
@@ -112,4 +71,17 @@ body {
 
 #form input:focus {
     outline: none;
+}
+
+#typing-box {
+    height: 30px;
+    background-color: #A8A8AF;
+    margin-top: 20px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+#typing-box p {
+    margin: 0;
 }

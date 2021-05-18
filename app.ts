@@ -7,6 +7,7 @@ const http = require('http').Server(app);
 const socketio = require('socket.io')(http);
 
 let connections: number = 0;
+let typers: string[] = [];
 
 // Generates the default username
 function generateName(): string {
@@ -38,11 +39,30 @@ socketio.on('connection', (socket: io.Socket) => {
 
     // These listen for clients to open a connection
     socket.on('message', (msg: Message) => {
+        if (typers.indexOf(msg.nickname) !== -1) {
+            let index = typers.indexOf(msg.message);
+            typers.splice(index, 1);
+            socket.broadcast.emit('typing', typers);
+        }
         socket.broadcast.emit('message', msg); // Sends msg to everyone but the client who broadcast the event
     });
 
     socket.on('nickname-change', (change: NicknameChange) => {
         socket.broadcast.emit('nickname-change', `${change.old} changed their nickname to ${change.new}`);
+    });
+
+    socket.on('typing', (typing: string) => {
+        if (typers.indexOf(typing) === -1) {
+            typers.push(typing);
+        }
+        socket.broadcast.emit('typing', typers);
+    });
+
+    socket.on('clear-typer', (typer: string) => {
+        let index = typers.indexOf(typer);
+        typers.splice(index, 1);
+
+        socket.broadcast.emit('typing', typers);
     });
 
     socket.on('disconnect', () => {
