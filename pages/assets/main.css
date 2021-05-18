@@ -6,7 +6,7 @@ body {
     font-family: 'Noto Sans JP', sans-serif;
 
     display: grid;
-    grid-template-columns: 20vw 80vw;
+    grid-template-columns: 300px 1fr;
     grid-template-rows: 100vh;
 
     color: #1C1D21;
