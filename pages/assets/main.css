@@ -3,7 +3,7 @@
 body {
     margin: 0;
 
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
 
     display: grid;
     grid-template-columns: 20vw 80vw;

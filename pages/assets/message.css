@@ -28,6 +28,7 @@
     padding: 20px;
     border-radius: 10px;
     background-color: #8d64e4;
+    display: inline-block;
 }
 
 .system-event.bubble {

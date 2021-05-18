@@ -32,5 +32,3 @@ socket.on('typing', typers => {
         document.getElementById('typing-box').innerHTML = typerString;
     }
 });
-
-console.log("Hello");
